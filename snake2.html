@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Snake Game</title>
+		<link rel="stylesheet" href="css/snake-style.css" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta property="og:title" content="Sunfire's Feed the Snake game">
+		<meta property="og:description" content="Learning to use HTML5 Canvas element by creating a fun, retro-style game">
+		<meta property="og:image" content="http://www.sunfireweb.com/images/snake-background.jpg">
+		
+	</head>
+	<body>
+		<div id="info">
+			<!-- Use this area to give user directions, etc --> 
+			<h2>Feed The Snake</h2>
+			<p>Use your arrow keys to guide the snake to collect food; spacebar to pause.</p>
+			<p>Try to beat your best score!</p>
+			<p><i>Works best on screens at least 650px wide. Global scoreboard is coming.</i></p>
+		</div>
+		<div id="stats">
+			<!-- plan to show top 10 scores with name -->
+			<span id="score"></span>
+			<span id="highscore"></span>
+			<p><button onclick="resetScore()" id="reset_score">Reset High Scores</button></p>
+		</div>		
+		<div class="container">
+			<div id="overlay">
+				<span id="endgamemsg">Your Final Score: <span id="final_score"></span><br /></span>
+				Press Spacebar to <span id="atStart">start</span><span id="paused">continue</span>...
+			</div>
+			<canvas id="canvas" width="600" height="450">
+				Sorry, this browser does not support the canvas element
+			</canvas>
+			<footer>
+				Created by Connie Hill, 2015;<br /> inspired by Projects in HTML5 by Eduonix on Udemy
+			</footer>
+		</div>
+
+		<!-- JQuery -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+		<!-- Main JS -->
+		<script src="js/snake-script.js"></script>
+	</body>
+</html>
